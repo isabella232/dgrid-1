@@ -33,7 +33,7 @@ function(_StoreMixin, declare, arrayUtil, lang, Deferred, on, query, string, has
 		delete grid._isLoading;
 	}
 	
-	return declare(_StoreMixin, {
+	return declare("dgrid.extensions.Pagination", _StoreMixin, {
 		// summary:
 		//		An extension for adding discrete pagination to a List or Grid.
 		

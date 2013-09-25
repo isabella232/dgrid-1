@@ -7,7 +7,7 @@ define([
 	"put-selector/put"
 ], function(declare, aspect, listen, has, Selection, put){
 
-return declare(Selection, {
+return declare("dgrid.CellSelection", Selection, {
 	// summary:
 	//		Add cell level selection capabilities to a grid. The grid will have a selection property and
 	//		fire "dgrid-select" and "dgrid-deselect" events.

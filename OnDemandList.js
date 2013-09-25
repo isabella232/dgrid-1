@@ -1,7 +1,7 @@
 define(["./List", "./_StoreMixin", "dojo/_base/declare", "dojo/_base/lang", "dojo/_base/Deferred", "dojo/dom", "dojo/on", "./util/misc", "put-selector/put"],
 function(List, _StoreMixin, declare, lang, Deferred, dom, listen, miscUtil, put){
 
-return declare([List, _StoreMixin], {
+return declare("dgrid.OnDemandList", [List, _StoreMixin], {
 	// summary:
 	//		Extends List to include virtual scrolling functionality, querying a
 	//		dojo/store instance for the appropriate range when the user scrolls.

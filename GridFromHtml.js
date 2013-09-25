@@ -35,7 +35,7 @@ function(Grid, declare, put){
 		return columns;
 	}
 	
-	var GridFromHtml = declare(Grid, {
+	var GridFromHtml = declare("dgrid.GridFromHtml", Grid, {
 		configStructure: function(){
 			// summary:
 			//		Configure subRows based on HTML originally in srcNodeRef

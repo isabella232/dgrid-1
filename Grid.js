@@ -14,7 +14,7 @@ function(kernel, declare, listen, has, put, List, miscUtil){
 		return miscUtil.escapeCssIdentifier(str, "-");
 	}
 	
-	var Grid = declare(List, {
+	var Grid = declare("dgrid.Grid", List, {
 		columns: null,
 		// cellNavigation: Boolean
 		//		This indicates that focus is at the cell level. This may be set to false to cause

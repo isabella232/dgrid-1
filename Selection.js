@@ -109,7 +109,7 @@ function setSelectable(grid, selectable){
 	}
 }
 
-return declare(null, {
+return declare("dgrid.Selection", null, {
 	// summary:
 	//		Add selection capabilities to a grid. The grid will have a selection property and
 	//		fire "dgrid-select" and "dgrid-deselect" events.
