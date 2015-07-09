@@ -18,7 +18,7 @@ var delegatingInputTypes = {
 	hasGridCellClass = /\bdgrid-cell\b/,
 	hasGridRowClass = /\bdgrid-row\b/;
 
-var Keyboard = declare(null, {
+var Keyboard = declare("dgrid.Keyboard", null, {
 	// summary:
 	//		Adds keyboard navigation capability to a list or grid.
 	

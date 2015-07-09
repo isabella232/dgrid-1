@@ -212,7 +212,7 @@ define([
 	// Mix in Selection for more resilient dnd handling, particularly when part
 	// of the selection is scrolled out of view and unrendered (which we
 	// handle below).
-	var DnD = declare(Selection, {
+	var DnD = declare("dgrid.extensions.DnD", Selection, {
 		// dndSourceType: String
 		//		Specifies the type which will be set for DnD items in the grid,
 		//		as well as what will be accepted by it by default.

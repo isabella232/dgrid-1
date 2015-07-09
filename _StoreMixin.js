@@ -29,7 +29,7 @@ function(kernel, declare, lang, Deferred, listen, aspect, put){
 		}
 	}
 	
-	return declare(null, {
+	return declare("dgrid._StoreMixin", null, {
 		// store: Object
 		//		The object store (implementing the dojo/store API) from which data is
 		//		to be fetched.

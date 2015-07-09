@@ -86,7 +86,7 @@ function(kernel, declare, lang, Deferred, listen, aspect, query, has, miscUtil, 
 		};
 	};
 	
-	return declare(null, {
+	return declare("dgrid.ColumnSet", null, {
 		// summary:
 		//		Provides column sets to isolate horizontal scroll of sets of 
 		//		columns from each other. This mainly serves the purpose of allowing for

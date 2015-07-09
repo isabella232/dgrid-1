@@ -6,7 +6,7 @@ define([
 	"../util/misc",
 	"xstyle/css!../css/extensions/CompoundColumns.css"
 ], function(lang, declare, has, query, miscUtil){
-	return declare(null, {
+	return declare("dgrid.extensions.CompoundColumns", null, {
 		// summary:
 		//		Extension allowing for specification of columns with additional
 		//		header rows spanning multiple columns for strictly display purposes.

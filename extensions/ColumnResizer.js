@@ -148,7 +148,7 @@ var resizer = {
 	}
 };
 
-return declare(null, {
+return declare("dgrid.extensions.ColumnResizer", null, {
 	resizeNode: null,
 	
 	// minWidth: Number

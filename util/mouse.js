@@ -1,4 +1,4 @@
-define(["dojo/on", "dojo/dom", "dojo/query"], function(on, dom){
+define(["dojo/_base/lang", "dojo/on", "dojo/dom", "dojo/query"], function(lang, on, dom){
 	function handler(selector, type){
 		// summary:
 		//		Creates a handler function usable as a simulated event to dojo/on,
@@ -19,7 +19,7 @@ define(["dojo/on", "dojo/dom", "dojo/query"], function(on, dom){
 		};
 	}
 	
-	return {
+	var mouseUtil = {
 		// Provide enter/leave events for rows, cells, and header cells.
 		// (Header row is trivial since there's only one.)
 		enterRow: handler(".dgrid-content .dgrid-row", "mouseover"),
@@ -32,4 +32,9 @@ define(["dojo/on", "dojo/dom", "dojo/query"], function(on, dom){
 		// Also expose the handler function, so people can do what they want.
 		createDelegatingHandler: handler
 	};
+	
+	lang.getObject("dgrid.util.mouse", true);
+	lang.mixin(dgrid.util.mouse, mouseUtil);
+	
+	return mouseUtil;
 });

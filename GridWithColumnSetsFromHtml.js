@@ -94,7 +94,7 @@ function(GridFromHtml, ColumnSet, declare){
 		}
 		return columnsets;
 	}
-	return declare([GridFromHtml, ColumnSet], {
+	return declare("dgrid.GridWithColumnSetsFromHtml", [GridFromHtml, ColumnSet], {
 		configStructure: function(){
 			// summary:
 			//		Configure subRows based on HTML originally in srcNodeRef

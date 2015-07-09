@@ -32,7 +32,7 @@ function(declare, has, listen, miscUtil, put, i18n){
 		return cb.id.substr(grid.id.length + 18);
 	}
 	
-	return declare(null, {
+	return declare("dgrid.extensions.ColumnHider", null, {
 		// hiderMenuNode: DOMNode
 		//		The node for the menu to show/hide columns.
 		hiderMenuNode: null,

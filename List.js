@@ -114,7 +114,7 @@ function(kernel, declare, dom, listen, has, miscUtil, TouchScroll, hasClass, put
 		}
 	}
 	
-	return declare(has("touch") ? TouchScroll : null, {
+	return declare("dgrid.List", has("touch") ? TouchScroll : null, {
 		tabableHeader: false,
 		// showHeader: Boolean
 		//		Whether to render header (sub)rows.

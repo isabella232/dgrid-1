@@ -1,6 +1,8 @@
-define(["dojo/_base/kernel", "dojo/_base/array", "dojo/on", "dojo/aspect", "dojo/_base/sniff", "put-selector/put"],
-function(kernel, arrayUtil, on, aspect, has, put){
-	return function(column, type){
+define(["dojo/_base/kernel", "dojo/_base/array", "dojo/_base/lang", "dojo/on", "dojo/aspect", "dojo/_base/sniff", "put-selector/put"],
+function(kernel, arrayUtil, lang, on, aspect, has, put){
+  
+  lang.getObject("dgrid.selector", true);
+	return (dgrid.selector = function(column, type){
 		
 		var listeners = [],
 			grid, headerCheckbox;
@@ -197,5 +199,5 @@ function(kernel, arrayUtil, on, aspect, has, put){
 		};
 		
 		return column;
-	};
+	});
 });

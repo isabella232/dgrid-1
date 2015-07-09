@@ -500,7 +500,7 @@ function(declare, on, touchUtil, has, put){
 		}
 	}
 	
-	return declare(null, {
+	return declare("dgrid.TouchScroll", null, {
 		// touchesToScroll: Number
 		//		Number of touches to require on the component's touch target node
 		//		in order to trigger scrolling behavior.

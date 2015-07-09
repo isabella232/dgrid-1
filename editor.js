@@ -456,7 +456,8 @@ function edit(cell) {
 
 // editor column plugin function
 
-return function(column, editor, editOn){
+lang.getObject("dgrid.editor", true);
+return (dgrid.editor = function(column, editor, editOn){
 	// summary:
 	//		Adds editing capability to a column's cells.
 	
@@ -608,5 +609,5 @@ return function(column, editor, editOn){
 	};
 	
 	return column;
-};
+});
 });
