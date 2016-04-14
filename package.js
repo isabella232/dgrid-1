@@ -1,15 +1,15 @@
 // jshint unused: false
 var profile = (function () {
 	var copyOnlyMids = {
-		'dgrid/Gruntfile': 1,
-		'dgrid/package': 1
+		/^dgrid1?\/Gruntfile$/,
+		/^dgrid1?\/package$/
 	};
 	var miniExcludeMids = {
-		'dgrid/CHANGES.md': 1,
-		'dgrid/LICENSE': 1,
-		'dgrid/README.md': 1,
-		'dgrid/Gruntfile': 1,
-		'dgrid/package': 1
+		/^dgrid1?\/CHANGES.md$/,
+		/^dgrid1?\/LICENSE$/,
+		/^dgrid1?\/README.md$/,
+		/^dgrid1?\/Gruntfile$/,
+		/^dgrid1?\/package$/
 	};
 	var amdRegex = /\.js$/;
 	var isDemoRegex = /\/demos\//;
@@ -19,7 +19,9 @@ var profile = (function () {
 	return {
 		resourceTags: {
 			copyOnly: function (filename, mid) {
-				return (mid in copyOnlyMids) || isDemoRegex.test(filename) || isTestRegex.test(filename);
+				return copyOnlyMids.some(function (midRE) {
+					return midRE.test(mid);
+				}) || isDemoRegex.test(filename) || isTestRegex.test(filename);
 			},
 
 			test: function (filename) {
@@ -30,7 +32,9 @@ var profile = (function () {
 				return isDemoRegex.test(filename) ||
 					isStylusRegex.test(filename) ||
 					isTestRegex.test(filename) ||
-					mid in miniExcludeMids;
+					miniExcludeMids.some(function (midRE) {
+						return midRE.test(mid);
+					});
 			},
 
 			amd: function (filename) {
