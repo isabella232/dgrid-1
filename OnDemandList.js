@@ -193,7 +193,12 @@ return declare("dgrid.OnDemandList", [List, _StoreMixin], {
 				}
 				// only update rowHeight if we actually got results and are visible
 				if(trCount && height){ self.rowHeight = height / trCount; }
-				
+
+				var minFarOffRemoval = self.rowHeight * self.bufferRows;
+				if (minFarOffRemoval > self.farOffRemoval) {
+					self.farOffRemoval = minFarOffRemoval;
+				}
+
 				total -= trCount;
 				preload.count = total;
 				preloadNode.rowIndex = trCount;
