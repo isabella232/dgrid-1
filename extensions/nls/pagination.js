@@ -18,6 +18,7 @@ define({
 	fi:true,
 	fr:true,
 	he:true,
+	hi:true,
 	it:true,
 	ja:true,
 	ko:true,
