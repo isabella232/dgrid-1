@@ -42,6 +42,11 @@ var ctrlEquiv = has("mac") ? "metaKey" : "ctrlKey",
 	downType = hasPointer ? hasPointer + (hasMSPointer ? "Down" : "down") : "mousedown",
 	upType = hasPointer ? hasPointer + (hasMSPointer ? "Up" : "up") : "mouseup";
 
+if (hasUserSelect === 'WebkitUserSelect' && typeof document.documentElement.style.msUserSelect !== 'undefined') {
+	// Edge defines both webkit and ms prefixes, rendering feature detects as brittle as UA sniffs...
+	hasUserSelect = false;
+}
+
 function makeUnselectable(node, unselectable){
 	// Utility function used in fallback path for recursively setting unselectable
 	var value = node.unselectable = unselectable ? "on" : "",
