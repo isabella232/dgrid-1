@@ -1,16 +1,16 @@
 // jshint unused: false
 var profile = (function () {
-	var copyOnlyMids = {
+	var copyOnlyMids = [
 		/^dgrid1?\/Gruntfile$/,
 		/^dgrid1?\/package$/
-	};
-	var miniExcludeMids = {
+	];
+	var miniExcludeMids = [
 		/^dgrid1?\/CHANGES.md$/,
 		/^dgrid1?\/LICENSE$/,
 		/^dgrid1?\/README.md$/,
 		/^dgrid1?\/Gruntfile$/,
 		/^dgrid1?\/package$/
-	};
+	];
 	var amdRegex = /\.js$/;
 	var isDemoRegex = /\/demos\//;
 	var isStylusRegex = /\.styl$/;
