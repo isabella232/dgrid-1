@@ -40,10 +40,6 @@ var profile = (function () {
 			amd: function (filename) {
 				return amdRegex.test(filename);
 			}
-		},
-
-		trees: [
-			[ '.', '.', /(?:\/\.)|(?:~$)|(?:(?:html-report|node_modules|nib|nodes)\/)/ ]
-		]
+		}
 	};
 })();
